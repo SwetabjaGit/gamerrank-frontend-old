@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import MomentUtils from '@date-io/moment';
+import { Provider as StoreProvider } from 'react-redux';
+import { ThemeProvider } from '@material-ui/styles';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { renderRoutes } from 'react-router-config';
 
-function App() {
+import theme from './theme';
+import configureStore from './redux/store.js';
+import routes from './routes';
+import {
+  ScrollReset,
+  GoogleAnalytics,
+  CookiesNotification
+} from './components';
+import './mixins/chartjs';
+import './mixins/moment';
+import './mixins/validate';
+import './mixins/prismjs';
+import './mock';
+import './assets/scss/index.scss';
+
+const history = createBrowserHistory();
+const store = configureStore();
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreProvider store={store}>
+      <ThemeProvider theme={theme}>
+        <MuiPickersUtilsProvider utils={MomentUtils}>
+          <Router history={history}>
+            <ScrollReset />
+            <GoogleAnalytics />
+            <CookiesNotification />
+            {renderRoutes(routes)}
+          </Router>
+        </MuiPickersUtilsProvider>
+      </ThemeProvider>
+    </StoreProvider>
   );
-}
+};
 
 export default App;
