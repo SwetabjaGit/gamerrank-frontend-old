@@ -6,6 +6,8 @@ export { default as Navigation } from './Navigation';
 export { default as NotificationsPopover } from './NotificationsPopover';
 export { default as PricingModal } from './PricingModal';
 export { default as StatusBullet } from './StatusBullet';
+export { default as Loader } from './Loader';
+export { default as asyncComponent } from './Async';
 
 /* export { default as AddPost } from './AddPost';
 export { default as Alert } from './Alert';

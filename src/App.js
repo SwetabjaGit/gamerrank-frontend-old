@@ -6,6 +6,11 @@ import { Provider as StoreProvider } from 'react-redux';
 import { ThemeProvider } from '@material-ui/styles';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import { renderRoutes } from 'react-router-config';
+//import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+//import { ThemeProvider } from 'styled-components';
+//import DateFnsUtils from "@date-io/date-fns";
+//import { StylesProvider } from "@material-ui/styles";
+
 
 import theme from './theme';
 import configureStore from './redux/store.js';
@@ -43,3 +48,22 @@ const App = () => {
 };
 
 export default App;
+
+/* return (
+    <StoreProvider store={store}>
+      <StylesProvider injectFirst>
+        <MuiPickersUtilsProvider utils={MomentUtils}>
+          <MuiThemeProvider theme={theme}>
+            <ThemeProvider theme={theme}>
+              <Router history={history}>
+                <ScrollReset />
+                <GoogleAnalytics />
+                <CookiesNotification />
+                {renderRoutes(routes)}
+              </Router>
+            </ThemeProvider>
+          </MuiThemeProvider>
+        </MuiPickersUtilsProvider>
+      </StylesProvider>
+    </StoreProvider>
+); */

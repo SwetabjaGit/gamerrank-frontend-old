@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { LinearProgress } from '@material-ui/core';
 
-import { NavBar, TopBar, ChatBar } from './components';
+import { NavBarDark, NavBar, TopBar, ChatBar } from './components';
+
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -25,8 +26,8 @@ const useStyles = makeStyles(() => ({
   },
   navBar: {
     zIndex: 3,
-    width: 256,
-    minWidth: 256,
+    width: 260,
+    minWidth: 260,
     flex: '0 0 auto'
   },
   content: {
@@ -61,6 +62,11 @@ const Dashboard = props => {
           onMobileClose={handleNavBarMobileClose}
           openMobile={openNavBarMobile}
         />
+        {/* <NavBarDark
+          className={classes.navBar}
+          onMobileClose={handleNavBarMobileClose}
+          openMobile={openNavBarMobile}
+        /> */}
         <main className={classes.content}>
           <Suspense fallback={<LinearProgress />}>
             {renderRoutes(route.routes)}

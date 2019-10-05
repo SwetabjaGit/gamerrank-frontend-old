@@ -21,23 +21,38 @@ const useStyles = makeStyles(theme => ({
   item: {
     display: 'block',
     paddingTop: 0,
-    paddingBottom: 0
+    paddingBottom: 0,
+    '&:focus': {
+      fontWeight: theme.typography.fontWeightBold,
+    },
   },
   itemLeaf: {
     display: 'flex',
     paddingTop: 0,
-    paddingBottom: 0
+    paddingBottom: 0,
+    '&:hover': {
+      background: theme.palette.navigation.background
+    },
+    '&:focus': {
+      fontWeight: theme.typography.fontWeightBold
+    }
   },
   button: {
-    color: colors.blueGrey[800],
+    color: theme.palette.navigation.title,
     padding: '10px 8px',
     justifyContent: 'flex-start',
     textTransform: 'none',
     letterSpacing: 0,
-    width: '100%'
+    width: '100%',
+    '&:hover': {
+      background: theme.palette.navigation.background
+    },
+    '&:focus': {
+      fontWeight: theme.typography.fontWeightBold
+    }
   },
   buttonLeaf: {
-    color: colors.blueGrey[800],
+    color: theme.palette.navigation.title,
     padding: '10px 8px',
     justifyContent: 'flex-start',
     textTransform: 'none',
@@ -46,18 +61,26 @@ const useStyles = makeStyles(theme => ({
     fontWeight: theme.typography.fontWeightRegular,
     '&.depth-0': {
       fontWeight: theme.typography.fontWeightMedium
+    },
+    '&:hover': {
+      background: theme.palette.navigation.background
+    },
+    '&:focus': {
+      fontWeight: theme.typography.fontWeightBold
     }
   },
   icon: {
-    color: theme.palette.icon,
+    color: theme.palette.navigation.icon,
     display: 'flex',
     alignItems: 'center',
-    marginRight: theme.spacing(1)
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(4),
   },
   expandIcon: {
+    color: theme.palette.navigation.expandIcon,
     marginLeft: 'auto',
-    height: 16,
-    width: 16
+    height: 20,
+    width: 20
   },
   label: {
     display: 'flex',
@@ -65,11 +88,11 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 'auto'
   },
   active: {
-    color: theme.palette.primary.main,
-    fontWeight: theme.typography.fontWeightMedium,
+    color: theme.palette.navigation.active,
+    background: theme.palette.navigation.background,
     '& $icon': {
-      color: theme.palette.primary.main
-    }
+      color: theme.palette.navigation.active,
+    },
   }
 }));
 

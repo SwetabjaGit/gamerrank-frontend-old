@@ -57,7 +57,7 @@
     "es6": true,
     "browser": true
   },
-  "extends": "eslint:recommended",
+  //"extends": "smart-tabs",
   "ecmaFeatures": {
     "jsx": true,
     "experimentalObjectRestSpread": true

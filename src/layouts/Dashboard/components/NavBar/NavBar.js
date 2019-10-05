@@ -4,8 +4,9 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/styles';
-import { Drawer, Divider, Paper, Avatar, Typography } from '@material-ui/core';
+import { Drawer, Divider, Paper, Avatar, Typography, colors } from '@material-ui/core';
 import { Hidden } from '@material-ui/core';
+import { blue, green, grey, indigo, red } from '@material-ui/core/colors';
 
 import useRouter from 'utils/useRouter';
 import { Navigation } from 'components';
@@ -13,11 +14,12 @@ import navigationConfig from './navigationConfig';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    background: '#1B2430',
     height: '100%',
     overflowY: 'auto'
   },
   content: {
-    padding: theme.spacing(2)
+    padding: 0,
   },
   profile: {
     display: 'flex',
@@ -30,13 +32,13 @@ const useStyles = makeStyles(theme => ({
     height: 60
   },
   name: {
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(2)
   },
   divider: {
     marginTop: theme.spacing(2)
   },
   navigation: {
-    marginTop: theme.spacing(2)
+    marginTop: theme.spacing(5)
   }
 }));
 
@@ -52,12 +54,11 @@ const NavBar = props => {
       onMobileClose && onMobileClose();
     }
 
-    
   }, [router.location.pathname]);
 
   const navbarContent = (
     <div className={classes.content}>
-      <div className={classes.profile}>
+      {/* <div className={classes.profile}>
         <Avatar
           alt="Person"
           className={classes.avatar}
@@ -73,7 +74,7 @@ const NavBar = props => {
         </Typography>
         <Typography variant="body2">{session.user.bio}</Typography>
       </div>
-      <Divider className={classes.divider} />
+      <Divider className={classes.divider} /> */}
       <nav className={classes.navigation}>
         {navigationConfig.map(list => (
           <Navigation

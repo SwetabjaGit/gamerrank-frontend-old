@@ -12,6 +12,10 @@ import { NavigationListItem } from './components';
 const useStyles = makeStyles(theme => ({
   root: {
     marginBottom: theme.spacing(3)
+  },
+  title: {
+    color: '#FFFFFF',
+    marginLeft: theme.spacing(4)
   }
 }));
 
@@ -85,7 +89,13 @@ const Navigation = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      {title && <Typography variant="overline">{title}</Typography>}
+      {title && 
+      <Typography 
+        className={classes.title} 
+        variant="overline"
+      >
+        {title}
+      </Typography>}
       <NavigationList
         depth={0}
         pages={pages}
