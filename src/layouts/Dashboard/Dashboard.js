@@ -52,10 +52,10 @@ const Dashboard = props => {
 
   return (
     <div className={classes.root}>
-      <TopBar
+      {/* <TopBar
         className={classes.topBar}
         onOpenNavBarMobile={handleNavBarMobileOpen}
-      />
+      /> */}
       <div className={classes.container}>
         <NavBar
           className={classes.navBar}

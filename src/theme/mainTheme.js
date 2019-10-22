@@ -2,16 +2,6 @@ import { blue, green, grey, indigo, red } from '@material-ui/core/colors';
 
 const DarkTheme = {
   name: 'Dark',
-  palette: {
-    primary: {
-      main: blue[700],
-      contrastText: '#FFF'
-    },
-    secondary: {
-      main: blue[600],
-      contrastText: '#FFF'
-    }
-  },
   header: {
     color: grey[500],
     background: '#FFFFFF',

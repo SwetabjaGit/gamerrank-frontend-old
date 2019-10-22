@@ -2,7 +2,7 @@
 const overrides = {
   MuiPickersDay: {
     day: {
-      fontWeight: '300'
+      fontWeight: '500'
     }
   },
   MuiPickersYear: {
@@ -43,13 +43,13 @@ const overrides = {
     dateHeader: {
       '& h4': {
         fontSize: '2.125rem',
-        fontWeight: 400
+        fontWeight: 500
       }
     },
     timeHeader: {
       '& h3': {
         fontSize: '3rem',
-        fontWeight: 400
+        fontWeight: 500
       }
     }
   },
@@ -57,7 +57,7 @@ const overrides = {
     hourMinuteLabel: {
       '& h2': {
         fontSize: '3.75rem',
-        fontWeight: 300
+        fontWeight: 500
       }
     }
   },
@@ -65,7 +65,7 @@ const overrides = {
     toolbar: {
       '& h4': {
         fontSize: '2.125rem',
-        fontWeight: 400
+        fontWeight: 500
       }
     }
   }

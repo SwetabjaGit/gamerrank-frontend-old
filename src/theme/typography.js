@@ -1,44 +1,57 @@
 import palette from './palette';
 
 export default {
+  fontFamily: [
+    'Nunito Sans',
+    '-apple-system',
+    'BlinkMacSystemFont',
+    '"Segoe UI"',
+    'Roboto',
+    '"Helvetica Neue"',
+    'Arial',
+    'sans-serif',
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"'
+  ].join(','),
   h1: {
     color: palette.text.primary,
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: '35px',
     letterSpacing: '-0.24px',
     lineHeight: '40px'
   },
   h2: {
     color: palette.text.primary,
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: '29px',
     letterSpacing: '-0.24px',
     lineHeight: '32px'
   },
   h3: {
     color: palette.text.primary,
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: '24px',
     letterSpacing: '-0.06px',
     lineHeight: '28px'
   },
   h4: {
     color: palette.text.primary,
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: '20px',
     letterSpacing: '-0.06px',
     lineHeight: '24px'
   },
   h5: {
     color: palette.text.primary,
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: '16px',
     letterSpacing: '-0.05px',
     lineHeight: '20px'
   },
   h6: {
     color: palette.text.primary,
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: '14px',
     letterSpacing: '-0.05px',
     lineHeight: '20px'
@@ -81,7 +94,7 @@ export default {
   overline: {
     color: palette.text.secondary,
     fontSize: '11px',
-    fontWeight: 500,
+    fontWeight: 600,
     letterSpacing: '0.33px',
     lineHeight: '13px',
     textTransform: 'uppercase'
