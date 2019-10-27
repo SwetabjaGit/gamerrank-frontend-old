@@ -6,6 +6,7 @@ import AuthLayout from './layouts/Auth';
 import ErrorLayout from './layouts/Error';
 import DashboardLayout from './layouts/Dashboard';
 import PresentationView from './views/Presentation';
+//import NewOrganization from './views/NewOrganization';
 
 const routes = [
   {
@@ -29,28 +30,33 @@ const routes = [
     route: '*',
     component: DashboardLayout,
     routes: [
-      /* {
-        path: '/chat',
+      {
+        path: '/organization',
         exact: true,
-        component: lazy(() => import('views/Chat'))
+        component: lazy(() => import('./views/NewOrganization'))
       },
       {
-        path: 'chat/:id',
+        path: '/organization/:tab',
         exact: true,
-        component: lazy(() => import('views/Chat'))
-      }, */
+        component: lazy(() => import('./views/NewOrganization'))
+      },
+      {
+        path: '/organization/brackets/:tab',
+        exact: true,
+        component: lazy(() => import('./views/NewOrganization'))
+      },
       {
         path: '/management/customers',
         exact: true,
         component: lazy(() => import('views/CustomerManagementList'))
       },
       {
-        path: '/management/customers/:id',
+        path: '/management/customerdetails/:tab',
         exact: true,
         component: lazy(() => import('views/CustomerManagementDetails'))
       },
       {
-        path: '/management/customers/:id/:tab',
+        path: '/management/customerdetails/:id/:tab',
         exact: true,
         component: lazy(() => import('views/CustomerManagementDetails'))
       },
@@ -60,7 +66,28 @@ const routes = [
         component: PresentationView
       }
     ]
-  }
+  },
+  /* {
+    route: '*',
+    component: NewOrganization,
+    routes: [
+      {
+        path: '/setup',
+        exact: true,
+        component: lazy(() => import('./views/CustomerManagementList'))
+      },
+      {
+        path: '/brackets',
+        exact: true,
+        component: lazy(() => import('./views/CustomerManagementDetails'))
+      },
+      {
+        path: '/streams',
+        exact: true,
+        component: PresentationView
+      }
+    ]
+  } */
 ];
 
 export default routes;

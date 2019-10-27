@@ -19,6 +19,8 @@ import PersonIcon from '@material-ui/icons/PersonOutlined';
 import ReceiptIcon from '@material-ui/icons/ReceiptOutlined';
 import SettingsIcon from '@material-ui/icons/SettingsOutlined';
 import ViewModuleIcon from '@material-ui/icons/ViewModule';
+import GamesIcon from '@material-ui/icons/Games';
+import ToysIcon from '@material-ui/icons/Toys';
 
 import { Label } from 'components';
 
@@ -30,6 +32,16 @@ export default [
         title: 'Overview',
         href: '/overview',
         icon: HomeIcon
+      },
+      {
+        title: 'New Organization',
+        href: '/organization',
+        icon: GamesIcon
+      },
+      {
+        title: 'New Tournament',
+        href: '/tournament',
+        icon: ToysIcon
       },
       {
         title: 'Dashboards',
@@ -57,7 +69,7 @@ export default [
           },
           {
             title: 'Customer Details',
-            href: '/management/customers/1/summary'
+            href: '/management/customerdetails/summary'
           },
           {
             title: 'Projects',

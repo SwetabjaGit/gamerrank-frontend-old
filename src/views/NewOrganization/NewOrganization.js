@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { LinearProgress } from '@material-ui/core';
 
-import { NavBarDark, NavBar, TopBar, ChatBar } from './components';
+import { MenuBar } from './components';
+import route from '../routes';
 
 
 const useStyles = makeStyles(() => ({
@@ -15,19 +16,15 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     overflow: 'hidden'
   },
-  topBar: {
-    zIndex: 2,
-    position: 'relative'
-  },
   container: {
     display: 'flex',
     flex: '1 1 auto',
     overflow: 'hidden'
   },
-  navBar: {
+  menuBar: {
     zIndex: 3,
-    width: 225,
-    minWidth: 225,
+    width: 270,
+    minWidth: 270,
     flex: '0 0 auto'
   },
   content: {
@@ -36,31 +33,27 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const Dashboard = props => {
-  const { route } = props;
+const NewOrganization = () => {
+  //const { route } = props;
 
   const classes = useStyles();
-  const [openNavBarMobile, setOpenNavBarMobile] = useState(false);
+  const [openMenuBarMobile, setOpenMenuBarMobile] = useState(false);
 
-  const handleNavBarMobileOpen = () => {
-    setOpenNavBarMobile(true);
+  const handleMenuBarMobileOpen = () => {
+    setOpenMenuBarMobile(true);
   };
 
-  const handleNavBarMobileClose = () => {
-    setOpenNavBarMobile(false);
+  const handleMenuBarMobileClose = () => {
+    setOpenMenuBarMobile(false);
   };
 
   return (
     <div className={classes.root}>
-      {/* <TopBar
-        className={classes.topBar}
-        onOpenNavBarMobile={handleNavBarMobileOpen}
-      /> */}
       <div className={classes.container}>
-        <NavBar
-          className={classes.navBar}
-          onMobileClose={handleNavBarMobileClose}
-          openMobile={openNavBarMobile}
+        <MenuBar
+          className={classes.menuBar}
+          onMobileClose={handleMenuBarMobileClose}
+          openMobile={openMenuBarMobile}
         />
         {/* <NavBarDark
           className={classes.navBar}
@@ -69,17 +62,16 @@ const Dashboard = props => {
         /> */}
         <main className={classes.content}>
           <Suspense fallback={<LinearProgress />}>
-            {renderRoutes(route.routes)}
+            {renderRoutes(route[0].routes)}
           </Suspense>
         </main>
       </div>
-      <ChatBar />
     </div>
   );
 };
 
-Dashboard.propTypes = {
+NewOrganization.propTypes = {
   route: PropTypes.object
 };
 
-export default Dashboard;
+export default NewOrganization;

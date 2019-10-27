@@ -40,13 +40,13 @@ const CustomerManagementDetails = props => {
     { value: 'logs', label: 'Logs' }
   ];
 
-  if (!tab) {
+  /* if (!tab) {
     return <Redirect to={`/management/customers/${id}/summary`} />;
-  }
+  } */
 
-  if (!tabs.find(t => t.value === tab)) {
+  /* if (!tabs.find(t => t.value === tab)) {
     return <Redirect to="/errors/error-404" />;
-  }
+  } */
 
   return (
     <Page

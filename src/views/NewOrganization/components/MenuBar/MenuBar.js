@@ -10,11 +10,11 @@ import { blue, green, grey, indigo, red } from '@material-ui/core/colors';
 
 import useRouter from 'utils/useRouter';
 import { Navigation } from 'components';
-import navigationConfig from './navigationConfig';
+import MenuBarConfig from './menubarConfig';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: '#28303F',
+    background: '#1D2632',
     height: '100%',
     overflowY: 'auto'
   },
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const NavBar = props => {
+const MenuBar = props => {
   const { openMobile, onMobileClose, className, ...rest } = props;
 
   const classes = useStyles();
@@ -56,7 +56,7 @@ const NavBar = props => {
 
   }, [router.location.pathname]);
 
-  const navbarContent = (
+  const menubarContent = (
     <div className={classes.content}>
       {/* <div className={classes.profile}>
         <Avatar
@@ -76,7 +76,7 @@ const NavBar = props => {
       </div>
       <Divider className={classes.divider} /> */}
       <nav className={classes.navigation}>
-        {navigationConfig.map(list => (
+        {MenuBarConfig.map(list => (
           <Navigation
             component="div"
             key={list.title}
@@ -101,7 +101,7 @@ const NavBar = props => {
             {...rest}
             className={clsx(classes.root, className)}
           >
-            {navbarContent}
+            {menubarContent}
           </div>
         </Drawer>
       </Hidden>
@@ -112,17 +112,17 @@ const NavBar = props => {
           elevation={1}
           square
         >
-          {navbarContent}
+          {menubarContent}
         </Paper>
       </Hidden>
     </Fragment>
   );
 };
 
-NavBar.propTypes = {
+MenuBar.propTypes = {
   className: PropTypes.string,
   onMobileClose: PropTypes.func,
   openMobile: PropTypes.bool
 };
 
-export default NavBar;
+export default MenuBar;

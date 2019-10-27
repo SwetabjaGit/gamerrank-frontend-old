@@ -51,7 +51,7 @@ const Summary = props => {
         item
         lg={4}
         md={6}
-        xl={3}
+        xl={4}
         xs={12}
       >
         <CustomerInfo customer={customer} />
@@ -60,7 +60,7 @@ const Summary = props => {
         item
         lg={4}
         md={6}
-        xl={3}
+        xl={4}
         xs={12}
       >
         <Invoices customer={customer} />
@@ -69,7 +69,7 @@ const Summary = props => {
         item
         lg={4}
         md={6}
-        xl={3}
+        xl={4}
         xs={12}
       >
         <SendEmails customer={customer} />
@@ -78,7 +78,7 @@ const Summary = props => {
         item
         lg={4}
         md={6}
-        xl={3}
+        xl={4}
         xs={12}
       >
         <OtherActions />
