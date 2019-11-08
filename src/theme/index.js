@@ -6,7 +6,7 @@ import overrides from './overrides';
 import breakpoints from './overrides/breakpoints';
 import shadows from './overrides/shadows';
 import DarkTheme from './mainTheme';
-//import props from './overrides/props';
+import props from './overrides/props';
 
 const theme = createMuiTheme({
   palette,
@@ -14,6 +14,7 @@ const theme = createMuiTheme({
   overrides,
   breakpoints,
   shadows,
+  props,
   body: DarkTheme.body,
   header: DarkTheme.header,
   sidebar: DarkTheme.sidebar,

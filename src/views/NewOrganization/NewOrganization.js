@@ -23,8 +23,8 @@ const useStyles = makeStyles(() => ({
   },
   menuBar: {
     zIndex: 3,
-    width: 270,
-    minWidth: 270,
+    width: 300,
+    minWidth: 300,
     flex: '0 0 auto'
   },
   content: {

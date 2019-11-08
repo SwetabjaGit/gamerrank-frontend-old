@@ -6,32 +6,37 @@ import { Label } from 'components';
 
 export default [
   {
-    title: 'Create',
+    title: 'CREATE',
     pages: [
       {
-        title: 'Setup',
-        href: '/organization/setup',
+        title: 'Basics',
+        href: '/organization/create/basics',
         icon: GamesIcon
       },
       {
-        title: 'Brackets',
-        href: '/organization/brackets/summary',
+        title: 'Description',
+        href: '/organization/create/description',
         icon: GamesIcon
       },
       {
-        title: 'Streams',
-        href: '/organization/streams',
+        title: 'Roster',
+        href: '/organization/create/roster',
         icon: GamesIcon
       },
       {
-        title: 'Publish',
-        href: '/organization/publish',
+        title: 'Social Handles',
+        href: '/organization/create/socialhandles',
         icon: GamesIcon
       },
+      {
+        title: 'Staff',
+        href: '/organization/create/staff',
+        icon: GamesIcon
+      }
     ]
   },
   {
-    title: 'Share',
+    title: 'SHARE',
     pages: [
       {
         title: 'Invite Players',
@@ -46,7 +51,7 @@ export default [
     ]
   },
   {
-    title: 'Manage',
+    title: 'MANAGE',
     pages: [
       {
         title: 'Participants',

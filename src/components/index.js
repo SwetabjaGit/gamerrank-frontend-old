@@ -14,19 +14,17 @@ export { default as ReviewStars } from './ReviewStars';
 export { default as TableEditBar } from './TableEditBar';
 export { default as SearchBar } from './SearchBar';
 
-/* export { default as AddPost } from './AddPost';
+export { default as RichEditor } from './RichEditor';
+export { default as ProjectCard } from './ProjectCard';
+export { default as AddPost } from './AddPost';
+export { default as PostCard } from './PostCard';
+
+/*  
 export { default as Alert } from './Alert';
 export { default as AuthGuard } from './AuthGuard';
 export { default as CodeBlock } from './CodeBlock';
 export { default as FilesDropzone } from './FilesDropzone';
-
 export { default as Markdown } from './Markdown';
-
 export { default as Paginate } from './Paginate';
-export { default as PostCard } from './PostCard';
-export { default as ProjectCard } from './ProjectCard';
-
-export { default as RichEditor } from './RichEditor';
-
 export { default as StackAvatars } from './StackAvatars';
  */

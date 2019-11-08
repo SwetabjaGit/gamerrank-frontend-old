@@ -36,12 +36,7 @@ const routes = [
         component: lazy(() => import('./views/NewOrganization'))
       },
       {
-        path: '/organization/:tab',
-        exact: true,
-        component: lazy(() => import('./views/NewOrganization'))
-      },
-      {
-        path: '/organization/brackets/:tab',
+        path: '/organization/create/:tab',
         exact: true,
         component: lazy(() => import('./views/NewOrganization'))
       },
@@ -64,30 +59,24 @@ const routes = [
         path: '/presentation',
         exact: true,
         component: PresentationView
-      }
+      },
+      /* {
+        path: '/organization/:tab',
+        exact: true,
+        component: lazy(() => import('./views/NewOrganization'))
+      },
+      {
+        path: '/organization/create/:tab',
+        exact: true,
+        component: lazy(() => import('./views/NewOrganization'))
+      },
+      {
+        path: '/organization/create/:id/:tab',
+        exact: true,
+        component: lazy(() => import('./views/NewOrganization'))
+      } */
     ]
   },
-  /* {
-    route: '*',
-    component: NewOrganization,
-    routes: [
-      {
-        path: '/setup',
-        exact: true,
-        component: lazy(() => import('./views/CustomerManagementList'))
-      },
-      {
-        path: '/brackets',
-        exact: true,
-        component: lazy(() => import('./views/CustomerManagementDetails'))
-      },
-      {
-        path: '/streams',
-        exact: true,
-        component: PresentationView
-      }
-    ]
-  } */
 ];
 
 export default routes;

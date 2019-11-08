@@ -9,7 +9,7 @@ import { Header, Summary, Invoices, Logs } from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(3)
+    padding: theme.spacing(3),
   },
   tabs: {
     marginTop: theme.spacing(3),

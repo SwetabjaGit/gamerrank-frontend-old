@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/styles';
 import { Drawer, Divider, Paper, Avatar, Typography, colors } from '@material-ui/core';
 import { Hidden } from '@material-ui/core';
-import { blue, green, grey, indigo, red } from '@material-ui/core/colors';
 
 import useRouter from 'utils/useRouter';
 import { Navigation } from 'components';
@@ -23,19 +22,26 @@ const useStyles = makeStyles(theme => ({
   },
   profile: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     minHeight: 'fit-content'
   },
   avatar: {
-    width: 60,
-    height: 60
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+    width: 45,
+    height: 45,
   },
   name: {
-    marginTop: theme.spacing(2)
+    color: '#EB2B44',
+    fontSize: 20
   },
   divider: {
-    marginTop: theme.spacing(2)
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    backgroundColor: '#3D4559'
   },
   navigation: {
     marginTop: theme.spacing(5)
@@ -58,23 +64,23 @@ const NavBar = props => {
 
   const navbarContent = (
     <div className={classes.content}>
-      {/* <div className={classes.profile}>
+      <div className={classes.profile}>
         <Avatar
           alt="Person"
           className={classes.avatar}
           component={RouterLink}
           src={session.user.avatar}
+          style={{ borderRadius: 4 }}
           to="/profile/1/timeline"
         />
         <Typography
           className={classes.name}
-          variant="h4"
         >
-          {session.user.first_name} {session.user.last_name}
+          GAMERRANK
         </Typography>
-        <Typography variant="body2">{session.user.bio}</Typography>
+        {/* <Typography variant="body2">{session.user.bio}</Typography> */}
       </div>
-      <Divider className={classes.divider} /> */}
+      <Divider className={classes.divider} />
       <nav className={classes.navigation}>
         {navigationConfig.map(list => (
           <Navigation

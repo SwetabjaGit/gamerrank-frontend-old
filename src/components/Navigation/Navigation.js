@@ -8,14 +8,18 @@ import { List, Typography } from '@material-ui/core';
 
 import useRouter from 'utils/useRouter';
 import { NavigationListItem } from './components';
+import { margin } from 'polished';
 
 const useStyles = makeStyles(theme => ({
   root: {
     marginBottom: theme.spacing(3)
   },
   title: {
-    color: '#FFFFFF',
-    marginLeft: theme.spacing(4)
+    color: 'white',
+    marginLeft: theme.spacing(2),
+    marginBottom: theme.spacing(1)
+  },
+  navigation: {
   }
 }));
 
@@ -92,11 +96,12 @@ const Navigation = props => {
       {title && 
       <Typography 
         className={classes.title} 
-        variant="overline"
+        variant="h4"
       >
         {title}
       </Typography>}
       <NavigationList
+        className={classes.navigation}
         depth={0}
         pages={pages}
         router={router}

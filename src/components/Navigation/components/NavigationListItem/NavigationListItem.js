@@ -44,6 +44,7 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'none',
     letterSpacing: 0,
     width: '100%',
+    height:40,
     '&:hover': {
       background: theme.palette.navigation.background
     },
@@ -58,6 +59,7 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'none',
     letterSpacing: 0,
     width: '100%',
+    height: 40,
     fontWeight: theme.typography.fontWeightRegular,
     '&.depth-0': {
       fontWeight: theme.typography.fontWeightMedium
@@ -74,7 +76,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(4),
+    marginRight: theme.spacing(1),
   },
   expandIcon: {
     color: theme.palette.navigation.expandIcon,

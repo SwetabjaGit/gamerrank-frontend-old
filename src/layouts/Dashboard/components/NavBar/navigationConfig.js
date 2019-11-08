@@ -26,7 +26,7 @@ import { Label } from 'components';
 
 export default [
   {
-    title: 'Pages',
+    title: 'PAGES',
     pages: [
       {
         title: 'Overview',
@@ -246,7 +246,7 @@ export default [
     ]
   },
   {
-    title: 'Support',
+    title: 'SUPPORT',
     pages: [
       {
         title: 'Presentation',

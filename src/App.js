@@ -11,7 +11,6 @@ import { renderRoutes } from 'react-router-config';
 //import DateFnsUtils from "@date-io/date-fns";
 //import { StylesProvider } from "@material-ui/styles";
 
-
 import theme from './theme';
 import configureStore from './redux/store.js';
 import routes from './routes';

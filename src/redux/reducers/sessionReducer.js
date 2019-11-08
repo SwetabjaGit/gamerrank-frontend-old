@@ -7,6 +7,10 @@ const initialState = {
     last_name: 'Zhi',
     email: 'demo@devias.io',
     avatar: '/images/avatars/avatar_11.png',
+    discordlogo: '/images/logos/discord-logo.svg',
+    nimotvlogo: '/images/logos/nimotv-logo.png',
+    logoPlaceholder: '/images/avatars/logo_placeholder.svg',
+    coverPlaceholder: '/images/avatars/cover_placeholder.svg',
     bio: 'Brain Director',
     role: 'ADMIN' // ['GUEST', 'USER', 'ADMIN']
   }

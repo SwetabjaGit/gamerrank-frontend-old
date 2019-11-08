@@ -14,20 +14,31 @@ const routes = [
     route: '*',
     component: NewOrganization,
     routes: [
+      
       {
-        path: '/organization/setup',
+        path: '/organization/create/:tab',
+        exact: true,
+        component: lazy(() => import('views/NewOrganization/organize'))
+      },
+      /* {
+        path: '/organization/create',
         exact: true,
         component: lazy(() => import('./CustomerManagementList'))
       },
       {
-        path: '/organization/brackets/:tab',
+        path: '/organization/create/:tab',
         exact: true,
         component: lazy(() => import('./CustomerManagementDetails'))
       },
       {
-        path: '/organization/brackets/:id/:tab',
+        path: '/organization/create/:id/:tab',
         exact: true,
         component: lazy(() => import('./CustomerManagementDetails'))
+      },
+      {
+        path: '/organization/create/:id/:tab',
+        exact: true,
+        component: lazy(() => import('views/Profile'))
       },
       {
         path: '/organization/streams',
@@ -38,7 +49,7 @@ const routes = [
         path: '/organization/publish',
         exact: true,
         component: PresentationView
-      }
+      } */
     ]
   }
 ];
